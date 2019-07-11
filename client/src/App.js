@@ -1,17 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import map from './map.svg';
+import './App.scss';
+import Map from './components/map'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to my incident enrichment app :-)
-        </p>
-      </header>
+    <section class="hero is-medium is-dark is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <img src={map} className="App-logo" alt="logo" />
+        <h1 class="title">Welcome to Incident Mapper</h1>
+        <h2 class="subtitle">Enrich 911 emergency incident data to provide better analytics for a fire department.</h2>
+        <Map />
+      </div>
     </div>
+    </section>
   );
 }
 
