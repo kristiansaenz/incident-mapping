@@ -48,12 +48,12 @@ class App extends React.Component {
     // this.geocode(address);
 
     // update center of map to lat,lng on json incident file
-    // this.setState({
-    //   center: {
-    //     lat: 789,
-    //     lng: 8979
-    //   }
-    // })
+     this.setState({
+      center: {
+        lat: lat_data,
+        lng: lng_data
+      }
+    })
   }
 
   render() {
@@ -70,7 +70,7 @@ class App extends React.Component {
                     <label class="label">Input the address to find incident on map</label>
                     <div class="control">
                       <div class="columns">
-                          <div class="column">
+                          <div class="column is-half">
                                 <input
                                 class="input" 
                                 type="text"
@@ -80,8 +80,9 @@ class App extends React.Component {
                                 </input>
                           </div>
                           <div class="column">
-                                <button class="button is-link" type="submit">Submit</button> 
-                          </div>                       
+                                <button class="button is-link" type="submit">Submit</button>
+                                <button class="button is-light" onClick={this.importJSON}>Import JSON</button>
+                          </div>      
                       </div>
                     </div>
                 </div>
@@ -96,3 +97,4 @@ class App extends React.Component {
   
 
 export default App;
+
