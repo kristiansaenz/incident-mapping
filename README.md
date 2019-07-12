@@ -11,7 +11,7 @@ Deliverable
 
 * Did you complete the project? comment as needed.
 
-    I did not complete the project. I did enjoy learning about map APIs / Google Maps API.
+    I did not complete the project. I did enjoy learning about gis, geospatial, geocoding, map APIs / Google Maps API.
     I was able to read the local JSON file to get the address and coordinates from a JSON example incident. If you click the submit button, it will mark the example incident.
     I was thinking, I could implement a JSON import button so that a user can import an incident file and generate a marker with data on the map.
 
@@ -41,10 +41,10 @@ Deliverable
 
          *********
 
-        Thank you for giving me the opportunity to do the project.
-        I think this would be a very good project for me to continue working on to expand my knowledge of full-stack development.
-
-        -Kristian Saenz
+    Thank you for giving me the opportunity to do the project. I learned what I need to work on to become a better developer.
+    I think this would be a very good project for me to continue working on to expand my knowledge of full-stack development.
+    
+    -Kristian Saenz
 
 * How much time did you spend on the project?
     Longer than anticipated, 7+ hours. 
