@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import { Marker } from 'google-maps-react';
 import MyParcel from '../components/myparcel';
 
 class Map extends Component {
 
-    onParcelClick(){
-        //when parcel is clicked, it will open up map side window with incident attributes
-        //Still need to call weather API & Virginia Parcel API
-        console.log('you clicked on incident')
+    onComponentDidMount(){
 
+        fetch("/incidentData")
+        .then(function(response) {
+          return response.text();
+        })
+        .then(function(myJson) {
+          console.log(JSON.stringify(myJson));
+        });
     }
 
     render() {
@@ -24,7 +29,9 @@ class Map extends Component {
                     lat={this.props.center.lat} 
                     lng={this.props.center.lng}
                     text="Incident is Here"
-                    onClick={this.onParcelClick()}
+                    />
+                <Marker
+                    position={{ lat: 37, lng: -74}} 
                     />
                 </GoogleMapReact>
             </div> 

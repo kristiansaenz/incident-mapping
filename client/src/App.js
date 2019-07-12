@@ -3,6 +3,7 @@ import map from './map.svg';
 import './App.scss';
 import Map from './components/map';
 import jsonData from './data/F01705150050.json';
+import Map2 from './components/map2';
 
 
 class App extends React.Component {
@@ -58,12 +59,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <section class="hero is-medium is-dark is-bold">
+      <section class="hero is-fullheight is-dark is-bold">
       <div class="hero-body">
         <div class="container">
-          <img src={map} class="App-logo" alt="logo" /><br/><br/>
+          <img src={map} class="App-logo"/><br/><br/>
           <h1 class="title">Welcome to Incident Mapper</h1>
-          <h2 class="subtitle">Enrich 911 emergency incident data to provide better analytics for the fire department.</h2><br/>
+          <h2 class="subtitle">Enrich 911 emergency incident data to provide better analytics for your fire department.</h2><br/>
 
           <form onSubmit={this.handleSubmit}>            
                 <div class="field">
@@ -89,6 +90,7 @@ class App extends React.Component {
             </form><br/>
   
           <Map center={this.state.center} zoom={11} />
+          {/* <Map2 zoom={11}/> */}
         </div>
       </div>
       </section>

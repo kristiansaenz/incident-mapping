@@ -1,16 +1,43 @@
 import React from 'react';
+import marker from '../map-localization.svg';
 
-function MyParcel(props){
+class MyParcel extends React.Component{
+    constructor(props) {
+        super(props);
 
-    return (
-        <div class="tile is-ancestor">
-            <div class="tile is-vertical is-parent">
-                <div class="tile is-child box">
-                    {props.text}
-                </div>          
+        this.state = {
+            loading: true
+        }
+    }
+
+    //when parcel is clicked, it will open up a window in map with incident attributes
+    //Still need to call weather API & Virginia Parcel API to display info in window 
+    onParcelClick() {
+        console.log('u clicked the lil parcel')
+    }
+
+    componentDidMount() {
+        // fetch("/myparcel")
+        // .then(function(response) {
+        //   return response.text();
+        // })
+        // .then(function(myJson) {
+        //   console.log(JSON.stringify(myJson));
+        // });
+    }
+
+    onParcelClick(){
+        console.log('u clicked the parcel')
+    }
+
+
+    render() {
+
+        return(
+            <div class="mark">
+                <img src={marker} class="App-logo" alt="logo" onClick={this.onParcelClick}/><br/><br/>
             </div>
-        </div>
-    );
+    )};
 }
 
 export default MyParcel;

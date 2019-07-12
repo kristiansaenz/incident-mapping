@@ -1,10 +1,11 @@
 const express = require('express')
-const upload = require('./upload')
+// const upload = require('./upload')
 const cors = require('cors')
 
 
+
 const server = express()
-const port = 3000
+const port = 5000
 
 //allow any domain
 var corsOptions = {
@@ -16,10 +17,12 @@ var corsOptions = {
 server.use(cors(corsOptions))
 
 //create get route
-server.get('/', (requst, response) => response.send("hi there ^.^"))
+server.get('/incidentData', function(requst, response){
+    response.send("here goes nothin' ^.^");
+});
 
 //create post route
-server.post('/upload', upload)
+// server.post('/upload', upload)
 
 //start server
 server.listen(port, () => console.log(`Server listening on port ${port}!`))
